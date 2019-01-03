@@ -1,6 +1,6 @@
 require 'pry'
 class Hash
   def keys_of(*args)
-binding.pry
+self.map{ |key, value|args.include?(value) }
   end
 end
