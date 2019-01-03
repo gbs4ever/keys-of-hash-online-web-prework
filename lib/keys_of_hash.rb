@@ -1,6 +1,13 @@
 require 'pry'
 class Hash
   def keys_of(*args)
-self.map{ |key, value|args.include?(value) }
-  end
+    self.map do |key, value|
+      if args.include?(value) 
+        key
+      else 
+        nil
+     
+      end
+    end
+end
 end
